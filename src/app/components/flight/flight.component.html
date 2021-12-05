@@ -1,0 +1,64 @@
+<p>    .   </p>
+<div>
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+      <div class="form-group">
+        <label>Enter New Flight Details:</label><hr>
+        <label for="model">Model Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="model"
+          [(ngModel)]="flightmodel.model"
+         
+          name="model"
+        />
+        
+        <br>
+      
+        <label for="source">Source</label>
+        <input
+          type="text"
+          class="form-control"
+          id="source"
+          [(ngModel)]="flightmodel.source"
+         
+          name="source"
+        />
+        
+        <br>
+      
+        <label for="destination">Destination</label>
+        <input
+          class="form-control"
+          id="destination"
+          required
+          [(ngModel)]="flightmodel.destination"
+          name="destination"
+        />
+        <br>
+         <label for="capacity">Capacity Of Flight</label>
+        <input
+          type="text"
+          class="form-control"
+          id="source"
+          [(ngModel)]="flightmodel.capacity"
+         
+          name="capacity"
+        />
+        
+        <br>
+      
+<hr>
+      
+       </div>
+<button (click)="saveFlight()" class="btn btn-success">Submit</button>
+    </div>
+
+    <div *ngIf="submitted">
+      <h4>Flight entry was submitted successfully!</h4>
+      <button class="btn btn-success" (click)="newFlightmodel()">Add</button>
+    </div>
+  </div>
+</div>
+

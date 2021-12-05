@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "77409895-7019-4f64-a5c4-2f1862fdb7ad"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -74,7 +77,10 @@
               "browserTarget": "AirlineBookingSystem:build:development"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "development",
+          "options":{
+            "proxyConfig": "src/proxy.conf.json"
+          }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
