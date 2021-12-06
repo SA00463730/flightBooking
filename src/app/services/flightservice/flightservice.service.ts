@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { Flightmodel } from '../../models/flightmodel/flightmodel.model';
 
 
-const baseUrl = 'http://localhost:51876/v1/api/flight';
+const baseUrl = 'http://localhost:54228/v1/api/flight';
 
 @Injectable({
     providedIn: 'root'
@@ -22,9 +22,9 @@ const baseUrl = 'http://localhost:51876/v1/api/flight';
     return this.http.get(`${baseUrl}/${flightid}`);
   }
   create(data: Flightmodel): Observable<any> {
-    const body=JSON.stringify(data);
-    console.log(body)
-    return this.http.post(baseUrl, body);
+    //const body=JSON.stringify(data);
+    console.log(data);
+    return this.http.post(baseUrl, data);
   }
 
   update(flightid: any, data: any): Observable<any> {
